@@ -17,11 +17,11 @@ namespace circustTrein
 
         public int getSize()
         {
-            return this.size;
+            return size;
         }
 
         public string getType() {
-            return this.type;
+            return type;
         }
     }
 }

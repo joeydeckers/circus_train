@@ -28,36 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.createAnimal = new System.Windows.Forms.Button();
+            this.animalSizeSelector = new System.Windows.Forms.ComboBox();
+            this.setAnimalType = new System.Windows.Forms.ComboBox();
+            this.sortAnimals = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(140, 107);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Carnivoor";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(140, 140);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Herbivoor";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // createAnimal
             // 
-            this.createAnimal.Location = new System.Drawing.Point(140, 183);
+            this.createAnimal.Location = new System.Drawing.Point(140, 212);
             this.createAnimal.Name = "createAnimal";
             this.createAnimal.Size = new System.Drawing.Size(75, 23);
             this.createAnimal.TabIndex = 2;
@@ -65,27 +44,53 @@
             this.createAnimal.UseVisualStyleBackColor = true;
             this.createAnimal.Click += new System.EventHandler(this.CreateAnimal_Click);
             // 
+            // animalSizeSelector
+            // 
+            this.animalSizeSelector.FormattingEnabled = true;
+            this.animalSizeSelector.Location = new System.Drawing.Point(140, 172);
+            this.animalSizeSelector.Name = "animalSizeSelector";
+            this.animalSizeSelector.Size = new System.Drawing.Size(121, 21);
+            this.animalSizeSelector.TabIndex = 3;
+            // 
+            // setAnimalType
+            // 
+            this.setAnimalType.FormattingEnabled = true;
+            this.setAnimalType.Location = new System.Drawing.Point(140, 131);
+            this.setAnimalType.Name = "setAnimalType";
+            this.setAnimalType.Size = new System.Drawing.Size(121, 21);
+            this.setAnimalType.TabIndex = 4;
+            // 
+            // sortAnimals
+            // 
+            this.sortAnimals.Location = new System.Drawing.Point(140, 252);
+            this.sortAnimals.Name = "sortAnimals";
+            this.sortAnimals.Size = new System.Drawing.Size(75, 23);
+            this.sortAnimals.TabIndex = 5;
+            this.sortAnimals.Text = "Sorteer dieren";
+            this.sortAnimals.UseVisualStyleBackColor = true;
+            this.sortAnimals.Click += new System.EventHandler(this.SortAnimals_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sortAnimals);
+            this.Controls.Add(this.setAnimalType);
+            this.Controls.Add(this.animalSizeSelector);
             this.Controls.Add(this.createAnimal);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button createAnimal;
+        private System.Windows.Forms.ComboBox animalSizeSelector;
+        private System.Windows.Forms.ComboBox setAnimalType;
+        private System.Windows.Forms.Button sortAnimals;
     }
 }
 

@@ -16,6 +16,12 @@ namespace circustTrein
         public Form1()
         {
             InitializeComponent();
+            animalSizeSelector.Items.Add(1);
+            animalSizeSelector.Items.Add(3);
+            animalSizeSelector.Items.Add(5);
+
+            setAnimalType.Items.Add("Carnivoor");
+            setAnimalType.Items.Add("Herbivoor");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,7 +31,12 @@ namespace circustTrein
 
         private void CreateAnimal_Click(object sender, EventArgs e)
         {
-            application.createAnimal(5, "carnivoor");
+            application.createAnimal(Convert.ToInt32(animalSizeSelector.Text), setAnimalType.Text);
+        }
+
+        private void SortAnimals_Click(object sender, EventArgs e)
+        {
+            application.sortAnimals();
         }
     }
 }
