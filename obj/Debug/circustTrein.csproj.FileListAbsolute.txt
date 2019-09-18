@@ -1,0 +1,10 @@
+C:\Users\JoeyD\Documents\circus_train\bin\Debug\circustTrein.exe.config
+C:\Users\JoeyD\Documents\circus_train\bin\Debug\circustTrein.exe
+C:\Users\JoeyD\Documents\circus_train\bin\Debug\circustTrein.pdb
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.csprojAssemblyReference.cache
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.Form1.resources
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.Properties.Resources.resources
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.csproj.GenerateResource.cache
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.csproj.CoreCompileInputs.cache
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.exe
+C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.pdb
