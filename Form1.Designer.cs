@@ -32,6 +32,7 @@
             this.animalSizeSelector = new System.Windows.Forms.ComboBox();
             this.setAnimalType = new System.Windows.Forms.ComboBox();
             this.sortAnimals = new System.Windows.Forms.Button();
+            this.animalListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // createAnimal
@@ -70,11 +71,20 @@
             this.sortAnimals.UseVisualStyleBackColor = true;
             this.sortAnimals.Click += new System.EventHandler(this.SortAnimals_Click);
             // 
+            // animalListBox
+            // 
+            this.animalListBox.FormattingEnabled = true;
+            this.animalListBox.Location = new System.Drawing.Point(336, 131);
+            this.animalListBox.Name = "animalListBox";
+            this.animalListBox.Size = new System.Drawing.Size(210, 173);
+            this.animalListBox.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.animalListBox);
             this.Controls.Add(this.sortAnimals);
             this.Controls.Add(this.setAnimalType);
             this.Controls.Add(this.animalSizeSelector);
@@ -91,6 +101,7 @@
         private System.Windows.Forms.ComboBox animalSizeSelector;
         private System.Windows.Forms.ComboBox setAnimalType;
         private System.Windows.Forms.Button sortAnimals;
+        private System.Windows.Forms.ListBox animalListBox;
     }
 }
 

@@ -12,7 +12,8 @@ namespace circustTrein
 {
     public partial class Form1 : Form
     {
-        App application = new App();
+        Train _train = new Train();
+
         public Form1()
         {
             InitializeComponent();
@@ -31,12 +32,13 @@ namespace circustTrein
 
         private void CreateAnimal_Click(object sender, EventArgs e)
         {
-            application.createAnimal(Convert.ToInt32(animalSizeSelector.Text), setAnimalType.Text);
+            _train.createAnimal(Convert.ToInt32(animalSizeSelector.Text), setAnimalType.Text);
+            animalListBox.Items.Add(setAnimalType.Text + " " + animalSizeSelector.Text);
         }
 
         private void SortAnimals_Click(object sender, EventArgs e)
         {
-            application.sortAnimals();
+            _train.sortAnimals();
         }
     }
 }

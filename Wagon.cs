@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace circustTrein
 {
@@ -16,31 +17,10 @@ namespace circustTrein
             return space;
         }
 
-        public string getAnimalType()
-        {
-            string animalType = "";
-            foreach(var animal in wagonAnimals)
-            {
-                return animal.getType();
-            }
-            return animalType;
-        }
-
-        public int getAnimalSize()
-        {
-            int animalSize = 0;
-
-            foreach (var animal in wagonAnimals)
-            {
-                return animal.getSize();
-            }
-
-            return animalSize;
-        }
-
-        public void setWagonSpace(int takenSpace)
-        {
-            space += takenSpace;
+        public void addAnimal(Animal animalToAdd) {
+            wagonAnimals.Add(animalToAdd);
+            space += animalToAdd.getSize();
+            MessageBox.Show(space.ToString());
         }
     }
 
