@@ -28,18 +28,27 @@ namespace circustTrein
 
         public void sortAnimals()
         {
-            wagons.Add(new Wagon());
+            var newWagon = new Wagon();
+
+            wagons.Add(newWagon);
+
             while (!isAnimalListEmpty()) {
                 for (int i = 0; i < animalsToSort.Count(); i++)
                 {
+
+                    if (newWagon.getWagonSpace() == 10) {
+                        MessageBox.Show("full");
+                    }
+
                     foreach(var wagon in wagons)
                     {
                         MessageBox.Show("Animal added");
 
                         wagon.addAnimal(animalsToSort[i]);
                         animalsToSort.RemoveAt(i);
-
                     }
+                   
+
                 }
 
             }

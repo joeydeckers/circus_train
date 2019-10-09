@@ -11,6 +11,8 @@ namespace circustTrein
     {
         private int size = 10;
         private int space = 0;
+        private bool isFull = false;
+
         public List<Animal> wagonAnimals = new List<Animal>();
         public int getWagonSpace()
         {
@@ -18,9 +20,13 @@ namespace circustTrein
         }
 
         public void addAnimal(Animal animalToAdd) {
+
             wagonAnimals.Add(animalToAdd);
             space += animalToAdd.getSize();
-            MessageBox.Show(space.ToString());
+
+            if (space == 10) {
+                isFull = true;
+            }
         }
     }
 
