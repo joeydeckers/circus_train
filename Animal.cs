@@ -10,10 +10,22 @@ namespace circustTrein
     {
         private int size;
         private string type;
+        private bool isInWagon = false;
         public Animal(int size, string type) {
             this.size = size;
             this.type = type;
         }
+
+        public bool getIfAnimalInWagon()
+        {
+            return isInWagon;
+        }
+
+        public void setIsInWagon()
+        {
+            isInWagon = true;
+        }
+
 
         public int getSize()
         {

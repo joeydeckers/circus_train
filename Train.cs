@@ -28,30 +28,23 @@ namespace circustTrein
 
         public void sortAnimals()
         {
-            var newWagon = new Wagon();
-
-            wagons.Add(newWagon);
-
             while (!isAnimalListEmpty()) {
+                var newWagon = new Wagon();
                 for (int i = 0; i < animalsToSort.Count(); i++)
                 {
 
-                    if (newWagon.getWagonSpace() == 10) {
-                        MessageBox.Show("full");
-                    }
-
-                    foreach(var wagon in wagons)
+                    if (animalsToSort[i].getIfAnimalInWagon() == false)
                     {
-                        MessageBox.Show("Animal added");
-
-                        wagon.addAnimal(animalsToSort[i]);
+                        newWagon.addAnimal(animalsToSort[i]);   
+                    }
+                    else {
                         animalsToSort.RemoveAt(i);
                     }
-                   
 
                 }
-
+                wagons.Add(newWagon);
             }
+
             MessageBox.Show("Sorting complete");
 
         }
@@ -62,7 +55,6 @@ namespace circustTrein
             {
                 return true;
             }
-
             return false;
         }
     }
