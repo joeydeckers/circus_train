@@ -47,7 +47,7 @@ namespace circustTrein
                 wagons.Add(newWagon);
             }
             // Ik begrijp niet waarom de applicatie meer wagonnen laat zien
-            MessageBox.Show(wagons.Count().ToString());
+            //MessageBox.Show(wagons.Count().ToString());
         }
 
         private bool isAnimalListEmpty()

@@ -26,30 +26,15 @@ namespace circustTrein
             }
             else
             {
-
-            }
-            else
-            {
-                if (animalToAdd.getType() == "Carnivoor")
-                {
-                    // Zorgt voor een loop die blijft lopen...
-                    for(int i = 0; wagonAnimals.Count() > i; i++)
-                    {
-                        if(!checkAnimalSize(animalToAdd, wagonAnimals[i]))
-                        {
-                            wagonAnimals.Add(animalToAdd);
-                            space += animalToAdd.getSize();
-                            animalToAdd.setIsInWagon();
-                        }
-                    }
-                }
-
+                space += animalToAdd.points;
+                animalToAdd.isInWagon = true;
+                MessageBox.Show(space.ToString());
             }
         }
 
         private bool checkAnimalSize(Animal animalToAdd, Animal animalInwagon)
         {
-            if(animalToAdd.getSize() >= animalInwagon.getSize())
+            if(animalToAdd.points >= animalInwagon.points)
             {
                 return true;
             }

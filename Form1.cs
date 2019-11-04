@@ -43,9 +43,8 @@ namespace circustTrein
         private void CreateAnimal_Click(object sender, EventArgs e)
         {
             Enum.TryParse(animalSizeSelector.ToString(), out AnimalSize type);
-            string wat = setAnimalType.Text;
 
-            _train.createAnimal(type, wat);
+            _train.createAnimal(type, setAnimalType.Text);
             animalListBox.Items.Add(setAnimalType.Text + " " + animalSizeSelector.Text);
         }
 
