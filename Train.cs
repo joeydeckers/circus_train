@@ -10,6 +10,8 @@ namespace circustTrein
 {
     class Train
     {
+        // Algortime is nog niet af, ben tegen wat dingen aangelopen.
+
         private List<Animal> animalsToSort = new List<Animal>();
         private List<Wagon> wagons = new List<Wagon>();
 
@@ -33,20 +35,19 @@ namespace circustTrein
                 for (int i = 0; i < animalsToSort.Count(); i++)
                 {
 
-                    if (animalsToSort[i].getIfAnimalInWagon() == false)
+                    if (animalsToSort[i].getIfAnimalInWagon() == true)
                     {
-                        newWagon.addAnimal(animalsToSort[i]);   
+                        animalsToSort.RemoveAt(i);
                     }
                     else {
-                        animalsToSort.RemoveAt(i);
+                        newWagon.addAnimal(animalsToSort[i]);
                     }
 
                 }
                 wagons.Add(newWagon);
             }
-
-            MessageBox.Show("Sorting complete");
-
+            // Ik begrijp niet waarom de applicatie meer wagonnen laat zien
+            MessageBox.Show(wagons.Count().ToString());
         }
 
         private bool isAnimalListEmpty()
