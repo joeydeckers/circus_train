@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace circustTrein
 {
+    enum AnimalSize
+    {
+        small,
+        medium,
+        large
+    }
+
     public partial class Form1 : Form
     {
         Train _train = new Train();
 
+   
+
         public Form1()
         {
             InitializeComponent();
-            animalSizeSelector.Items.Add(1);
-            animalSizeSelector.Items.Add(3);
-            animalSizeSelector.Items.Add(5);
+
+            animalSizeSelector.Items.Add(AnimalSize.small);
+            animalSizeSelector.Items.Add(AnimalSize.medium);
+            animalSizeSelector.Items.Add(AnimalSize.large);
 
             setAnimalType.Items.Add("Carnivoor");
             setAnimalType.Items.Add("Herbivoor");
@@ -32,7 +42,10 @@ namespace circustTrein
 
         private void CreateAnimal_Click(object sender, EventArgs e)
         {
-            _train.createAnimal(Convert.ToInt32(animalSizeSelector.Text), setAnimalType.Text);
+            Enum.TryParse(animalSizeSelector.ToString(), out AnimalSize type);
+            string wat = setAnimalType.Text;
+
+            _train.createAnimal(type, wat);
             animalListBox.Items.Add(setAnimalType.Text + " " + animalSizeSelector.Text);
         }
 

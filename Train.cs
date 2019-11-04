@@ -13,7 +13,7 @@ namespace circustTrein
         private List<Animal> animalsToSort = new List<Animal>();
         private List<Wagon> wagons = new List<Wagon>();
 
-        public void createAnimal(int size, string type) {
+        public void createAnimal(AnimalSize size, string type) {
             animalsToSort.Add(new Animal(size, type));
         }
 

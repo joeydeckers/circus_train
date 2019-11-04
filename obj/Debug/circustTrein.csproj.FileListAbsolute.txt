@@ -8,3 +8,13 @@ C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.csproj.GenerateReso
 C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.csproj.CoreCompileInputs.cache
 C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.exe
 C:\Users\JoeyD\Documents\circus_train\obj\Debug\circustTrein.pdb
+C:\Users\Joey Deckers\Documents\circus_train\bin\Debug\circustTrein.exe.config
+C:\Users\Joey Deckers\Documents\circus_train\bin\Debug\circustTrein.exe
+C:\Users\Joey Deckers\Documents\circus_train\bin\Debug\circustTrein.pdb
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.csprojAssemblyReference.cache
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.Form1.resources
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.Properties.Resources.resources
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.csproj.GenerateResource.cache
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.csproj.CoreCompileInputs.cache
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.exe
+C:\Users\Joey Deckers\Documents\circus_train\obj\Debug\circustTrein.pdb

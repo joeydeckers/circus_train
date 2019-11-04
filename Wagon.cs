@@ -26,22 +26,7 @@ namespace circustTrein
             }
             else
             {
-                if(animalToAdd.getType() == "Carnivoor")
-                {
-                    for(int i = 0; wagonAnimals.Count() > i; i++)
-                    {
-                        if(animalToAdd.getSize() >= wagonAnimals[i].getSize() || animalToAdd.getSize() <= wagonAnimals[i].getSize())
-                        {
-                            MessageBox.Show("mag er niet in");
-                        }
-                        else
-                        {
-                            wagonAnimals.Add(animalToAdd);
-                            space += animalToAdd.getSize();
-                            animalToAdd.setIsInWagon();
-                        }
-                    }
-                }
+
             }
         }
     }
