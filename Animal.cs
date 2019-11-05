@@ -10,15 +10,15 @@ namespace circustTrein
     class Animal
     {
         public AnimalSize Size { get; private set; }
-        public string type { get; private set; }
+        public AnimalType Type { get; private set; }
         public bool isInWagon { get;  set; }
         public int points { get; private set; }
         
-        public Animal(AnimalSize size, string animalType) {
+        public Animal(AnimalSize size, AnimalType animalType) {
+            isInWagon = false;
             switch(size)
             {
                 case AnimalSize.small:
-                    MessageBox.Show(size.ToString());
                     points = 1;
                     break;
                 case AnimalSize.medium:
@@ -29,17 +29,8 @@ namespace circustTrein
                     break;
             }
 
-            this.type = animalType;
-        }
+            Type = animalType;
 
-        public bool getIfAnimalInWagon()
-        {
-            return isInWagon;
-        }
-
-        public void setIsInWagon()
-        {
-            isInWagon = true;
         }
 
     }

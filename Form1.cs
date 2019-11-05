@@ -14,25 +14,26 @@ namespace circustTrein
     {
         small,
         medium,
-        large
+        large,
+    }
+
+    enum AnimalType
+    {
+        herbivore,
+        carnivore
     }
 
     public partial class Form1 : Form
     {
         Train _train = new Train();
 
-   
-
         public Form1()
         {
             InitializeComponent();
 
-            animalSizeSelector.Items.Add(AnimalSize.small);
-            animalSizeSelector.Items.Add(AnimalSize.medium);
-            animalSizeSelector.Items.Add(AnimalSize.large);
-
-            setAnimalType.Items.Add("Carnivoor");
-            setAnimalType.Items.Add("Herbivoor");
+            animalSizeSelector.DataSource = Enum.GetValues(typeof(AnimalSize));
+            setAnimalType.DataSource = Enum.GetValues(typeof(AnimalType));
+ 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,10 +43,11 @@ namespace circustTrein
 
         private void CreateAnimal_Click(object sender, EventArgs e)
         {
-            Enum.TryParse(animalSizeSelector.ToString(), out AnimalSize type);
+            Enum.TryParse(animalSizeSelector.SelectedValue.ToString(), out AnimalSize type);
+            Enum.TryParse(setAnimalType.SelectedValue.ToString(), out AnimalType animalType);
 
-            _train.createAnimal(type, setAnimalType.Text);
-            animalListBox.Items.Add(setAnimalType.Text + " " + animalSizeSelector.Text);
+            _train.createAnimal(type, animalType);
+            animalListBox.Items.Add(setAnimalType.Text + " " + type.ToString());
         }
 
         private void SortAnimals_Click(object sender, EventArgs e)

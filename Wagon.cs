@@ -28,7 +28,7 @@ namespace circustTrein
             {
                 space += animalToAdd.points;
                 animalToAdd.isInWagon = true;
-                MessageBox.Show(space.ToString());
+                wagonAnimals.Add(animalToAdd);
             }
         }
 

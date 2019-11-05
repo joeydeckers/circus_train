@@ -10,12 +10,10 @@ namespace circustTrein
 {
     class Train
     {
-        // Algortime is nog niet af, ben tegen wat dingen aangelopen.
-
         private List<Animal> animalsToSort = new List<Animal>();
         private List<Wagon> wagons = new List<Wagon>();
 
-        public void createAnimal(AnimalSize size, string type) {
+        public void createAnimal(AnimalSize size, AnimalType type) {
             animalsToSort.Add(new Animal(size, type));
         }
 
@@ -30,25 +28,42 @@ namespace circustTrein
 
         public void sortAnimals()
         {
-            while (!isAnimalListEmpty()) {
-                var newWagon = new Wagon();
-                for (int i = 0; i < animalsToSort.Count(); i++)
+            //while (!isAnimalListEmpty()) {
+            //    var newWagon = new Wagon();
+
+            //    for (int i = 0; i < animalsToSort.Count(); i++)
+            //    {
+            //        if (animalsToSort[i].isInWagon == true)
+            //        {
+            //            animalsToSort.RemoveAt(i);
+
+            //        }
+            //        else
+            //        {
+            //            newWagon.addAnimal(animalsToSort[i]);
+            //        }
+
+            //    }
+            //    wagons.Add(newWagon);
+            //}
+            var newWagon = new Wagon();
+
+            foreach (var animal in animalsToSort)
+            {
+                if (!animal.isInWagon == true)
                 {
-
-                    if (animalsToSort[i].getIfAnimalInWagon() == true)
-                    {
-                        animalsToSort.RemoveAt(i);
-                    }
-                    else {
-                        newWagon.addAnimal(animalsToSort[i]);
-                    }
-
+                    newWagon.addAnimal(animal);
                 }
-                wagons.Add(newWagon);
+                else
+                {
+                    newWagon = new Wagon();
+                    wagons.Add(newWagon);
+                    newWagon.addAnimal(animal);
+                }
             }
-            // Ik begrijp niet waarom de applicatie meer wagonnen laat zien
-            //MessageBox.Show(wagons.Count().ToString());
+             MessageBox.Show(wagons.Count().ToString());
         }
+
 
         private bool isAnimalListEmpty()
         {
