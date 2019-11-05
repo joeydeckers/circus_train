@@ -35,13 +35,13 @@
             this.sortAnimals = new System.Windows.Forms.Button();
             this.animalListBox = new System.Windows.Forms.ListBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sortedOptions = new System.Windows.Forms.ComboBox();
+            this.sortedWagons = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // createAnimal
             // 
-            this.createAnimal.Location = new System.Drawing.Point(140, 212);
+            this.createAnimal.Location = new System.Drawing.Point(65, 205);
             this.createAnimal.Name = "createAnimal";
             this.createAnimal.Size = new System.Drawing.Size(75, 23);
             this.createAnimal.TabIndex = 2;
@@ -52,7 +52,7 @@
             // animalSizeSelector
             // 
             this.animalSizeSelector.FormattingEnabled = true;
-            this.animalSizeSelector.Location = new System.Drawing.Point(140, 172);
+            this.animalSizeSelector.Location = new System.Drawing.Point(65, 165);
             this.animalSizeSelector.Name = "animalSizeSelector";
             this.animalSizeSelector.Size = new System.Drawing.Size(121, 21);
             this.animalSizeSelector.TabIndex = 3;
@@ -60,14 +60,14 @@
             // setAnimalType
             // 
             this.setAnimalType.FormattingEnabled = true;
-            this.setAnimalType.Location = new System.Drawing.Point(140, 131);
+            this.setAnimalType.Location = new System.Drawing.Point(65, 124);
             this.setAnimalType.Name = "setAnimalType";
             this.setAnimalType.Size = new System.Drawing.Size(121, 21);
             this.setAnimalType.TabIndex = 4;
             // 
             // sortAnimals
             // 
-            this.sortAnimals.Location = new System.Drawing.Point(140, 252);
+            this.sortAnimals.Location = new System.Drawing.Point(65, 245);
             this.sortAnimals.Name = "sortAnimals";
             this.sortAnimals.Size = new System.Drawing.Size(75, 23);
             this.sortAnimals.TabIndex = 5;
@@ -78,25 +78,25 @@
             // animalListBox
             // 
             this.animalListBox.FormattingEnabled = true;
-            this.animalListBox.Location = new System.Drawing.Point(318, 131);
+            this.animalListBox.Location = new System.Drawing.Point(243, 124);
             this.animalListBox.Name = "animalListBox";
             this.animalListBox.Size = new System.Drawing.Size(210, 173);
             this.animalListBox.TabIndex = 6;
             // 
-            // sortedOptions
+            // sortedWagons
             // 
-            this.sortedOptions.FormattingEnabled = true;
-            this.sortedOptions.Location = new System.Drawing.Point(592, 130);
-            this.sortedOptions.Name = "sortedOptions";
-            this.sortedOptions.Size = new System.Drawing.Size(121, 21);
-            this.sortedOptions.TabIndex = 7;
+            this.sortedWagons.FormattingEnabled = true;
+            this.sortedWagons.Location = new System.Drawing.Point(483, 124);
+            this.sortedWagons.Name = "sortedWagons";
+            this.sortedWagons.Size = new System.Drawing.Size(187, 173);
+            this.sortedWagons.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.sortedOptions);
+            this.Controls.Add(this.sortedWagons);
             this.Controls.Add(this.animalListBox);
             this.Controls.Add(this.sortAnimals);
             this.Controls.Add(this.setAnimalType);
@@ -117,7 +117,7 @@
         private System.Windows.Forms.Button sortAnimals;
         private System.Windows.Forms.ListBox animalListBox;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.ComboBox sortedOptions;
+        private System.Windows.Forms.ListBox sortedWagons;
     }
 }
 

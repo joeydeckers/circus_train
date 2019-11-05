@@ -46,17 +46,15 @@ namespace circustTrein
             Enum.TryParse(animalSizeSelector.SelectedValue.ToString(), out AnimalSize type);
             Enum.TryParse(setAnimalType.SelectedValue.ToString(), out AnimalType animalType);
 
-            _train.createAnimal(type, animalType);
+            _train.CreateAnimal(type, animalType);
             animalListBox.Items.Add(setAnimalType.Text + " " + type.ToString());
         }
 
         private void SortAnimals_Click(object sender, EventArgs e)
         {
-            _train.sortAnimals();
-            foreach(var wagon in _train.GetWagons())
-            {
-                sortedOptions.Items.Add(wagon._id.ToString()); 
-
+            _train.SortAnimals();
+            foreach (var wagon in _train.GetWagons()) {
+                sortedWagons.Items.Add(wagon.ToString());
             }
         }
     }

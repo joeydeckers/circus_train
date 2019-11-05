@@ -13,12 +13,8 @@ namespace circustTrein
         private List<Animal> animalsToSort = new List<Animal>();
         private List<Wagon> wagons = new List<Wagon>();
 
-        public void createAnimal(AnimalSize size, AnimalType type) {
+        public void CreateAnimal(AnimalSize size, AnimalType type) {
             animalsToSort.Add(new Animal(size, type));
-        }
-
-        public List<Animal> GetAnimals() {
-            return animalsToSort;
         }
 
         public List<Wagon> GetWagons()
@@ -26,21 +22,20 @@ namespace circustTrein
             return wagons;
         }
 
-        public void sortAnimals()
+        public void SortAnimals()
         {
-            var newWagon = new Wagon(1);
+            var newWagon = new Wagon();
 
             foreach (var animalToAdd in animalsToSort)
             {
                 if (newWagon.Calculate(animalToAdd) == true)
                 {
-                    newWagon.addAnimal(animalToAdd);
+                    newWagon.AddAnimal(animalToAdd);
                 }
                 else
                 {
-                   // MessageBox.Show(wagons.Count().ToString());
-                    newWagon = new Wagon(wagons.Count() +1);
-                    newWagon.addAnimal(animalToAdd);
+                    newWagon = new Wagon();
+                    newWagon.AddAnimal(animalToAdd);
                     wagons.Add(newWagon);
 
                 }
