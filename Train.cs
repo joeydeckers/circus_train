@@ -17,61 +17,37 @@ namespace circustTrein
             animalsToSort.Add(new Animal(size, type));
         }
 
-        public List<Animal> getAnimals() {
+        public List<Animal> GetAnimals() {
             return animalsToSort;
         }
 
-        public List<Wagon> getWagons()
+        public List<Wagon> GetWagons()
         {
             return wagons;
         }
 
         public void sortAnimals()
         {
-            //while (!isAnimalListEmpty()) {
-            //    var newWagon = new Wagon();
+            var newWagon = new Wagon(1);
 
-            //    for (int i = 0; i < animalsToSort.Count(); i++)
-            //    {
-            //        if (animalsToSort[i].isInWagon == true)
-            //        {
-            //            animalsToSort.RemoveAt(i);
-
-            //        }
-            //        else
-            //        {
-            //            newWagon.addAnimal(animalsToSort[i]);
-            //        }
-
-            //    }
-            //    wagons.Add(newWagon);
-            //}
-            var newWagon = new Wagon();
-
-            foreach (var animal in animalsToSort)
+            foreach (var animalToAdd in animalsToSort)
             {
-                if (!animal.isInWagon == true)
+                if (newWagon.Calculate(animalToAdd) == true)
                 {
-                    newWagon.addAnimal(animal);
+                    newWagon.addAnimal(animalToAdd);
                 }
                 else
                 {
-                    newWagon = new Wagon();
+                   // MessageBox.Show(wagons.Count().ToString());
+                    newWagon = new Wagon(wagons.Count() +1);
+                    newWagon.addAnimal(animalToAdd);
                     wagons.Add(newWagon);
-                    newWagon.addAnimal(animal);
+
                 }
             }
-             MessageBox.Show(wagons.Count().ToString());
-        }
+            wagons.Add(newWagon);
 
-
-        private bool isAnimalListEmpty()
-        {
-           if(animalsToSort.Count() == 0)
-            {
-                return true;
-            }
-            return false;
+            MessageBox.Show(wagons.Count().ToString());
         }
     }
 }

@@ -11,36 +11,44 @@ namespace circustTrein
     {
         private int space = 0;
         private bool isFull = false;
+        public int _id;
 
         public List<Animal> wagonAnimals = new List<Animal>();
-        public bool checkIfFull()
-        {
-            return isFull;
-        }
 
+        public Wagon(int id)
+        {
+            _id = id;
+        }
 
         public void addAnimal(Animal animalToAdd) {
-            if (space == 10)
-            {
-                isFull = true;
-            }
-            else
-            {
-                space += animalToAdd.points;
-                animalToAdd.isInWagon = true;
-                wagonAnimals.Add(animalToAdd);
-            }
+            space += animalToAdd.points;
+            animalToAdd.isInWagon = true;
+            wagonAnimals.Add(animalToAdd);
         }
 
-        private bool checkAnimalSize(Animal animalToAdd, Animal animalInwagon)
+        public bool Calculate(Animal animalToAdd){
+            if (!IsSpaceAvailable())
+            {
+                return false;
+            }
+
+            var check = wagonAnimals.Where(animal => animalToAdd.points >= animal.points && animalToAdd.Type == AnimalType.carnivore);
+            if (check.Any())
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool IsSpaceAvailable()
         {
-            if(animalToAdd.points >= animalInwagon.points)
+            if(space == 10)
             {
-                return true;
+                return false;
             }
-
-            return false;
+            return true;
         }
+
     }
 
 

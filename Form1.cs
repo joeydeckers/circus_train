@@ -53,6 +53,11 @@ namespace circustTrein
         private void SortAnimals_Click(object sender, EventArgs e)
         {
             _train.sortAnimals();
+            foreach(var wagon in _train.GetWagons())
+            {
+                sortedOptions.Items.Add(wagon._id.ToString()); 
+
+            }
         }
     }
 }
