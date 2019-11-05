@@ -28,6 +28,7 @@ namespace circustTrein
 
             foreach (var animalToAdd in animalsToSort)
             {
+
                 if (newWagon.Calculate(animalToAdd) == true)
                 {
                     newWagon.AddAnimal(animalToAdd);
@@ -37,12 +38,11 @@ namespace circustTrein
                     newWagon = new Wagon();
                     newWagon.AddAnimal(animalToAdd);
                     wagons.Add(newWagon);
-
                 }
             }
             wagons.Add(newWagon);
 
-            MessageBox.Show(wagons.Count().ToString());
+            //MessageBox.Show(wagons.Count().ToString());
         }
     }
 }

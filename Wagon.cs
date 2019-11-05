@@ -9,14 +9,14 @@ namespace circustTrein
 {
     class Wagon
     {
-        private int space = 0;
+        private int space;
+
         public List<Animal> wagonAnimals = new List<Animal>();
 
         public void AddAnimal(Animal animalToAdd) {
             space += animalToAdd.points;
             animalToAdd.isInWagon = true;
             wagonAnimals.Add(animalToAdd);
-            //MessageBox.Show(space.ToString());
         }
 
         public bool Calculate(Animal animalToAdd){
@@ -25,22 +25,27 @@ namespace circustTrein
                 return false;
             }
 
+            //var condition = wagonAnimals.Where(animal => animalToAdd.points >= animal.points && animalToAdd.Type == AnimalType.carnivore);
             var condition = wagonAnimals.Where(animal => animalToAdd.points >= animal.points && animalToAdd.Type == AnimalType.carnivore || animal.points >= animalToAdd.points && animal.Type == AnimalType.carnivore);
-         
+
             if (condition.Any())
             {
                 return false;
             }
             else
             {
+
                 return true;
             }
+
         }
 
         private bool IsSpaceAvailable()
         {
+            MessageBox.Show(space.ToString());
             if(space == 10)
             {
+                MessageBox.Show("Vol!");
                 return false;
             }
             return true;
@@ -48,7 +53,7 @@ namespace circustTrein
 
         public override string ToString()
         {
-            return space.ToString();
+            return "Dieren:" + " " + space.ToString();
         }
     }
 
