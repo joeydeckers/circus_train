@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace circustTrein
 {
-    enum AnimalSize
+    public enum AnimalSize
     {
         small,
         medium,
         large,
     }
 
-    enum AnimalType
+    public enum AnimalType
     {
         herbivore,
         carnivore

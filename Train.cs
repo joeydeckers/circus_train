@@ -25,24 +25,27 @@ namespace circustTrein
         public void SortAnimals()
         {
             var newWagon = new Wagon();
-
+            wagons.Add(newWagon);
             foreach (var animalToAdd in animalsToSort)
             {
 
                 // for loop maken die kijkt naar de indivuele/alle wagon en structuur moet anders
 
-                if (newWagon.Calculate(animalToAdd))
+                for(int i = 0; i < wagons.Count(); i++)
                 {
-                    newWagon.AddAnimal(animalToAdd);
-                }
-                else
-                {
-                    newWagon = new Wagon();
-                    newWagon.AddAnimal(animalToAdd);
-                    wagons.Add(newWagon);
+                    if (!wagons[i].Calculate(animalToAdd))
+                    {
+                        MessageBox.Show(i.ToString());
+                        //MessageBox.Show(newWagon.GetAnimals().ToString());
+                        //newWagon.AddAnimal(animalToAdd);
+                        newWagon = new Wagon();
+                        newWagon.AddAnimal(animalToAdd);
+                        wagons.Add(newWagon);
+                        break;
+                    }
                 }
             }
-            wagons.Add(newWagon);
+           
         }
     }
 }
