@@ -29,7 +29,12 @@ namespace circustTrein
                 return false;
             }
 
-            if (!CheckAnimalToAddSize(animalToAdd) && !CheckAnimalToAddType(animalToAdd) || !CheckAnimalInsideSize(animalToAdd) && !CheckAnimalInsideType(animalToAdd))
+            if (!CheckAnimalToAddSize(animalToAdd) & !CheckAnimalToAddType(animalToAdd))
+            {
+                return false;
+            }
+
+            if (!CheckAnimalInsideSize(animalToAdd) & !CheckAnimalInsideType(animalToAdd))
             {
                 return false;
             }

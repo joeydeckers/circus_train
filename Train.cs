@@ -24,28 +24,62 @@ namespace circustTrein
 
         public void SortAnimals()
         {
-            var newWagon = new Wagon();
-            wagons.Add(newWagon);
-            foreach (var animalToAdd in animalsToSort)
+
+
+            while (animalsToSort.Count() > 0)
             {
+                var newWagon = new Wagon();
+                wagons.Add(newWagon);
 
-                // for loop maken die kijkt naar de indivuele/alle wagon en structuur moet anders
-
-                for(int i = 0; i < wagons.Count(); i++)
+                foreach(var animalToAdd in animalsToSort.ToList())
                 {
-                    if (!wagons[i].Calculate(animalToAdd))
+                   
+                    if (newWagon.Calculate(animalToAdd))
                     {
-                        MessageBox.Show(i.ToString());
-                        //MessageBox.Show(newWagon.GetAnimals().ToString());
-                        //newWagon.AddAnimal(animalToAdd);
-                        newWagon = new Wagon();
-                        newWagon.AddAnimal(animalToAdd);
-                        wagons.Add(newWagon);
-                        break;
+                        animalsToSort.Remove(animalToAdd);
                     }
                 }
+
             }
-           
+
+            //foreach (var animalToAdd in animalsToSort)
+            //{
+
+            //    // for loop maken die kijkt naar de indivuele/alle wagon en structuur moet anders
+
+            //    //for (int i = 0; i < wagons.Count(); i++)
+            //    //{
+            //    //    //MessageBox.Show(i.ToString());
+            //    //    //MessageBox.Show(wagons.Count().ToString());
+
+            //    //    if (!wagons[i].Calculate(animalToAdd))
+            //    //    {
+            //    //        //MessageBox.Show(newWagon.GetAnimals().ToString());
+            //    //        //newWagon.AddAnimal(animalToAdd);
+            //    //        newWagon = new Wagon();
+            //    //        newWagon.AddAnimal(animalToAdd);
+            //    //        wagons.Add(newWagon);
+            //    //        break;
+            //    //    }
+            //    //}
+
+            
+
+
+            //    //while (!newWagon.Calculate(animalToAdd))
+            //    //{
+
+            //    //        //MessageBox.Show(newWagon.GetAnimals().ToString());
+            //    //        //newWagon.AddAnimal(animalToAdd);
+            //    //        newWagon = new Wagon();
+            //    //        newWagon.AddAnimal(animalToAdd);
+            //    //        wagons.Add(newWagon);
+            //    //        break;
+
+            //    //}
+            //}
+            //animalsToSort.Clear();
+
         }
     }
 }
